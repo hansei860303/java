@@ -1,9 +1,8 @@
-package OverrideClass;
+package PolymorphismClass;
 
 public class Bar extends Foo {
-	
 	@Override
 	public void show() {
-		System.out.println("Barクラスです");
+		System.out.println("★Barクラス");
 	}
 }

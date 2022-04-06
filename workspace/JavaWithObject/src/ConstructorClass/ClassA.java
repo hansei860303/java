@@ -1,4 +1,4 @@
-package ConstructorTest;
+package ConstructorClass;
 
 public class ClassA {
 	
