@@ -1,0 +1,27 @@
+version: '3'
+services:
+    db:
+        image: mysql
+        container_name: methodologic-mysql
+        ports:
+            - "3306:3306"
+        volumes:
+            - ./sql:/docker-entrypoint-initdb.d
+        environment:
+            MYSQL_DATABASE: methodologic
+            MYSQL_USER: mysql
+            MYSQL_PASSWORD: mysql
+            MYSQL_ROOT_PASSWORD: root
+    app:
+        build: .
+        image: methodologic-core
+        container_name: methodologic-core
+        ports:
+            - "9001:9001"
+        volumes:
+            - .:/app
+        environment:
+            spring.datasource.driverClassName: "com.mysql.cj.jdbc.Driver"
+            spring.datasource.url: "jdbc:mysql://db/methodologic"
+            spring.datasource.username: "mysql"
+            spring.datasource.password: "mysql" 
