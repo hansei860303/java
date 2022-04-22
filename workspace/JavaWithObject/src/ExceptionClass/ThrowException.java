@@ -1,0 +1,17 @@
+package ExceptionClass;
+
+public class ThrowException {
+
+	public static void main(String[] args) {
+		try {
+			sub();
+		}catch (Exception e) {
+			System.out.println("Åöó·äOÇ™î≠ê∂ÇµÇ‹ÇµÇΩ");
+		}
+	}
+	
+	public static void sub() throws Exception{
+		throw new Exception();
+	}
+
+}
