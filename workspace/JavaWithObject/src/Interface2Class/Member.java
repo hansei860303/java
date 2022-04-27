@@ -1,6 +1,6 @@
 package Interface2Class;
 
-public class Member implements Comparable<Member> {
+public class Member {
 
 	private int id;
 	private String name;
@@ -8,11 +8,6 @@ public class Member implements Comparable<Member> {
 	public Member(int id, String name) {
 		this.id = id;
 		this.name = name;
-	}
-
-	@Override
-	public int compareTo(Member m) {
-		return Integer.compare(id, m.id);
 	}
 
 	@Override

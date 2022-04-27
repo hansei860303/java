@@ -60,5 +60,10 @@ public class Book {
 				+ price + "]";
 	}
 	
+	
+	public boolean isSameAuthor(Book other) {
+		return author.equals(other.getAuthor());
+	}
+	
 
 }
